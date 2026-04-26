@@ -150,7 +150,7 @@ export default function BerlinPage() {
         headline="Bußgeldbescheid Berlin — Bußgeldstelle, Blitzer, Einspruch"
         datePublished="2025-02-10"
         dateModified="2026-04-25"
-        authorName="Dr. Markus Vogel"
+        authorName="Fatih Bektas"
       />
       <FAQSchema items={faqItems} />
 
@@ -163,7 +163,7 @@ export default function BerlinPage() {
               category="Berlin · Stand 25.04.2026"
               title="Bußgeldbescheid in Berlin — alles zu Bußgeldstelle, Blitzern und Einspruch"
               updatedAt="25.04.2026"
-              reviewedBy="Dr. Markus Vogel"
+              reviewedBy="Fatih Bektas"
             />
 
             <p className="text-sm leading-relaxed text-ink-muted mb-6">

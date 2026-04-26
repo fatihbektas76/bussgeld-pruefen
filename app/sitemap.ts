@@ -2,6 +2,24 @@ import type { MetadataRoute } from 'next';
 
 const BASE = 'https://bussgeld-pruefen.de';
 
+function buildSpeedUrls(now: string): MetadataRoute.Sitemap {
+  const locations = ['innerorts', 'ausserorts'] as const;
+  const urls: MetadataRoute.Sitemap = [];
+
+  for (const loc of locations) {
+    for (let kmh = 1; kmh <= 70; kmh++) {
+      urls.push({
+        url: `${BASE}/geblitzt/${loc}/${kmh}-kmh`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+      });
+    }
+  }
+
+  return urls;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();
 
@@ -9,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: BASE, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${BASE}/bussgeldrechner`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE}/einspruch-pruefen`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${BASE}/geblitzt/innerorts/21-25-kmh`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    ...buildSpeedUrls(now),
     { url: `${BASE}/verstoesse/rotlicht/einfach`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/lebenslagen/probezeit`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/verfahren/bussgeldbescheid/einspruch`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },

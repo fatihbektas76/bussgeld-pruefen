@@ -70,7 +70,7 @@ export default function ProbezeitPage() {
         headline="Probezeit f\u00fcr Fahranf\u00e4nger \u2014 A-Verst\u00f6\u00dfe, B-Verst\u00f6\u00dfe und ihre Folgen"
         datePublished="2026-01-20"
         dateModified="2026-04-25"
-        authorName="Dr. Markus Vogel"
+        authorName="Fatih Bektas"
       />
       <FAQSchema items={faqItems} />
       <HowToSchema

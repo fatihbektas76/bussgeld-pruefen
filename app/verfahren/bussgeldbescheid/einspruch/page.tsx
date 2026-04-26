@@ -103,7 +103,7 @@ export default function EinspruchPage() {
         headline="Einspruch gegen Bußgeldbescheid — Frist, Form und Inhalt 2026"
         datePublished="2025-01-15"
         dateModified="2026-04-25"
-        authorName="Dr. Markus Vogel"
+        authorName="Fatih Bektas"
       />
       <HowToSchema
         name="Einspruch gegen Bußgeldbescheid einlegen"
@@ -120,7 +120,7 @@ export default function EinspruchPage() {
               category="Ratgeber Einspruch 2026"
               title="Einspruch gegen Bußgeldbescheid — Frist, Form und Inhalt 2026"
               updatedAt="25.04.2026"
-              reviewedBy="Dr. Markus Vogel"
+              reviewedBy="Fatih Bektas"
             />
 
             <DirectAnswerBox>

@@ -62,7 +62,7 @@ export default function RotlichtEinfachPage() {
         headline="Rotlichtversto\u00df einfach (Rotphase < 1 Sekunde) \u2014 90 \u20ac und 1 Punkt"
         datePublished="2026-02-10"
         dateModified="2026-04-25"
-        authorName="Dr. Markus Vogel"
+        authorName="Fatih Bektas"
       />
       <FAQSchema items={faqItems} />
 

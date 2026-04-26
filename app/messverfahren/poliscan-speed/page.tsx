@@ -91,7 +91,7 @@ export default function PoliScanSpeedPage() {
         headline="PoliScan Speed (Vitronic) — Funktion, Messfehler und Angriffspunkte"
         datePublished="2025-03-01"
         dateModified="2026-04-25"
-        authorName="Dr. Markus Vogel"
+        authorName="Fatih Bektas"
       />
       <FAQSchema items={faqItems} />
 
@@ -104,7 +104,7 @@ export default function PoliScanSpeedPage() {
               category="Messverfahren-Analyse"
               title="PoliScan Speed (Vitronic) — Funktion, Messfehler und Angriffspunkte"
               updatedAt="25.04.2026"
-              reviewedBy="Dr. Markus Vogel"
+              reviewedBy="Fatih Bektas"
             />
 
             <DirectAnswerBox>
