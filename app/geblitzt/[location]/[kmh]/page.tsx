@@ -135,14 +135,14 @@ export default async function SpeedPage({ params }: PageProps) {
             <div id="direktantwort">
               <DirectAnswerBox>
                 Wer {locationLabel.toLowerCase()}{' '}
-                <strong>{kmh}&nbsp;km/h zu schnell</strong> f&auml;hrt, zahlt{' '}
+                <strong>{kmh}{'\u00A0'}km/h zu schnell</strong> fährt, zahlt{' '}
                 <strong>
-                  {entry.bussgeldEur}&nbsp;&euro;{' '}
+                  {entry.bussgeldEur}{'\u00A0'}€{' '}
                   {hasPunkte ? 'Bu\u00dfgeld' : 'Verwarnungsgeld'}
                 </strong>
                 {hasPunkte && (
                   <>
-                    , erh&auml;lt{' '}
+                    , erhält{' '}
                     <strong>{punkteText} in Flensburg</strong>
                   </>
                 )}
@@ -156,8 +156,8 @@ export default async function SpeedPage({ params }: PageProps) {
                 {isA
                   ? 'In der Probezeit ist dies ein A-Versto\u00df mit Aufbauseminar und Probezeit\u00adverl\u00e4ngerung.'
                   : 'In der Probezeit ist dies ein B-Versto\u00df \u2014 ein einzelner B-Versto\u00df bleibt ohne zus\u00e4tzliche Folgen.'}{' '}
-                Der Toleranzabzug von 3&nbsp;km/h ist bereits
-                ber&uuml;cksichtigt.
+                Der Toleranzabzug von 3{'\u00A0'}km/h ist bereits
+                berücksichtigt.
               </DirectAnswerBox>
             </div>
 
@@ -199,16 +199,16 @@ export default async function SpeedPage({ params }: PageProps) {
             {/* --- Bescheid --- */}
             <section id="bescheid" className="mt-10">
               <h2 className="text-[20px] leading-[1.35] font-medium text-ink mb-3">
-                Das steht in Ihrem Bu&szlig;geldbescheid
+                Das steht in Ihrem Bußgeldbescheid
               </h2>
               <p className="text-sm leading-relaxed text-ink-muted mb-3">
-                {locationLabel} gilt gem&auml;&szlig; {data.stvo} eine
-                H&ouml;chstgeschwindigkeit von {limit}&nbsp;km/h, sofern kein
+                {locationLabel} gilt gemäß {data.stvo} eine
+                Höchstgeschwindigkeit von {limit}{'\u00A0'}km/h, sofern kein
                 Verkehrszeichen etwas anderes anordnet. Bei einer
-                &Uuml;berschreitung um genau {kmh}&nbsp;km/h greift der
-                Bu&szlig;geldkatalog ({data.bkatTable}) mit einem{' '}
+                Überschreitung um genau {kmh}{'\u00A0'}km/h greift der
+                Bußgeldkatalog ({data.bkatTable}) mit einem{' '}
                 {hasPunkte ? 'Regelbu\u00dfgeld' : 'Verwarnungsgeld'} von{' '}
-                {entry.bussgeldEur}&nbsp;&euro;
+                {entry.bussgeldEur}{'\u00A0'}€
                 {hasPunkte &&
                   ` zuz\u00fcglich ${punkteText} im Fahreignungsregister`}
                 {hasFahrverbot &&
@@ -220,10 +220,10 @@ export default async function SpeedPage({ params }: PageProps) {
                   <thead>
                     <tr className="bg-surface-alt text-left">
                       <th className="px-4 py-2.5 font-medium text-ink">
-                        &Uuml;berschreitung
+                        Überschreitung
                       </th>
                       <th className="px-4 py-2.5 font-medium text-ink">
-                        Bu&szlig;geld
+                        Bußgeld
                       </th>
                       <th className="px-4 py-2.5 font-medium text-ink">
                         Punkte
@@ -251,7 +251,7 @@ export default async function SpeedPage({ params }: PageProps) {
                           <td
                             className={`px-4 py-2 ${isActive ? 'font-medium text-primary-800' : 'text-ink-muted'}`}
                           >
-                            {r.bussgeld} &euro;
+                            {r.bussgeld} €
                           </td>
                           <td
                             className={`px-4 py-2 ${isActive ? 'font-medium text-primary-800' : 'text-ink-muted'}`}
@@ -270,42 +270,42 @@ export default async function SpeedPage({ params }: PageProps) {
                 </table>
               </div>
               <p className="text-xs text-ink-subtle mt-2">
-                * Fahrverbot bei Wiederholung ab 26&nbsp;km/h innerhalb von
-                12&nbsp;Monaten. Quelle: BKatV 2026.
+                * Fahrverbot bei Wiederholung ab 26{'\u00A0'}km/h innerhalb von
+                12{'\u00A0'}Monaten. Quelle: BKatV 2026.
               </p>
             </section>
 
             {/* --- Toleranz --- */}
             <section id="toleranz" className="mt-10">
               <h2 className="text-[20px] leading-[1.35] font-medium text-ink mb-3">
-                Toleranzabzug bei {kmh}&nbsp;km/h &mdash; so wird gerechnet
+                Toleranzabzug bei {kmh}{'\u00A0'}km/h — so wird gerechnet
               </h2>
               <p className="text-sm leading-relaxed text-ink-muted mb-3">
-                Steht in Ihrem Bu&szlig;geldbescheid eine vorwerfbare
-                &Uuml;berschreitung von {kmh}&nbsp;km/h, wurde
-                tats&auml;chlich mindestens {kmh + 3}&nbsp;km/h zu schnell
-                gemessen. Der pauschale Toleranzabzug von 3&nbsp;km/h (bei
-                Geschwindigkeiten bis 100&nbsp;km/h) ist bereits im Bescheid
-                ber&uuml;cksichtigt.
+                Steht in Ihrem Bußgeldbescheid eine vorwerfbare
+                Überschreitung von {kmh}{'\u00A0'}km/h, wurde
+                tatsächlich mindestens {kmh + 3}{'\u00A0'}km/h zu schnell
+                gemessen. Der pauschale Toleranzabzug von 3{'\u00A0'}km/h (bei
+                Geschwindigkeiten bis 100{'\u00A0'}km/h) ist bereits im Bescheid
+                berücksichtigt.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <div className="flex-1 rounded-xl border border-line bg-surface p-4 text-center">
                   <p className="text-xs text-ink-subtle mb-1">Gemessen</p>
                   <p className="text-xl font-semibold text-ink">
-                    {gemessen}&nbsp;km/h
+                    {gemessen}{'\u00A0'}km/h
                   </p>
                   <p className="text-xs text-ink-muted mt-1">
-                    bei erlaubten {limit}&nbsp;km/h
+                    bei erlaubten {limit}{'\u00A0'}km/h
                   </p>
                 </div>
                 <div className="flex items-center justify-center text-ink-subtle text-lg">
-                  &minus;
+                  −
                 </div>
                 <div className="flex-1 rounded-xl border border-line bg-surface p-4 text-center">
                   <p className="text-xs text-ink-subtle mb-1">Toleranz</p>
-                  <p className="text-xl font-semibold text-ink">3&nbsp;km/h</p>
+                  <p className="text-xl font-semibold text-ink">3{'\u00A0'}km/h</p>
                   <p className="text-xs text-ink-muted mt-1">
-                    pauschal bis 100&nbsp;km/h
+                    pauschal bis 100{'\u00A0'}km/h
                   </p>
                 </div>
                 <div className="flex items-center justify-center text-ink-subtle text-lg">
@@ -314,44 +314,44 @@ export default async function SpeedPage({ params }: PageProps) {
                 <div className="flex-1 rounded-xl border border-primary-200 bg-primary-50 p-4 text-center">
                   <p className="text-xs text-primary-600 mb-1">Vorwerfbar</p>
                   <p className="text-xl font-semibold text-primary-800">
-                    {kmh}&nbsp;km/h
+                    {kmh}{'\u00A0'}km/h
                   </p>
                   <p className="text-xs text-primary-600 mt-1">
-                    &uuml;ber dem Limit
+                    über dem Limit
                   </p>
                 </div>
               </div>
               <p className="text-sm leading-relaxed text-ink-muted mt-4">
-                <strong>Praxis-Tipp:</strong> Pr&uuml;fen Sie in Ihrem
-                Bu&szlig;geldbescheid, ob die gemessene Geschwindigkeit und die
-                vorwerfbare &Uuml;berschreitung rechnerisch zusammenpassen.
-                Fehler bei der Toleranzberechnung kommen vor und k&ouml;nnen
-                ein Ansatzpunkt f&uuml;r den Einspruch sein.
+                <strong>Praxis-Tipp:</strong> Prüfen Sie in Ihrem
+                Bußgeldbescheid, ob die gemessene Geschwindigkeit und die
+                vorwerfbare Überschreitung rechnerisch zusammenpassen.
+                Fehler bei der Toleranzberechnung kommen vor und können
+                ein Ansatzpunkt für den Einspruch sein.
               </p>
             </section>
 
             {/* --- Einspruch --- */}
             <section id="einspruch" className="mt-10">
               <h2 className="text-[20px] leading-[1.35] font-medium text-ink mb-4">
-                Wann lohnt sich ein Einspruch bei {kmh}&nbsp;km/h?
+                Wann lohnt sich ein Einspruch bei {kmh}{'\u00A0'}km/h?
               </h2>
               {!hasFahrverbot && !hasPunkte && (
                 <p className="text-sm leading-relaxed text-ink-muted mb-4">
-                  Bei {entry.bussgeldEur}&nbsp;&euro; ohne Punkte ist der
+                  Bei {entry.bussgeldEur}{'\u00A0'}€ ohne Punkte ist der
                   finanzielle Anreiz gering. Ein Einspruch kann sich dennoch
                   lohnen:
                 </p>
               )}
               {hasFahrverbot && (
                 <p className="text-sm leading-relaxed text-ink-muted mb-4">
-                  Bei {entry.bussgeldEur}&nbsp;&euro;, {punkteText} und{' '}
-                  {fahrverbotText} ist ein Einspruch in vielen F&auml;llen
+                  Bei {entry.bussgeldEur}{'\u00A0'}€, {punkteText} und{' '}
+                  {fahrverbotText} ist ein Einspruch in vielen Fällen
                   wirtschaftlich sinnvoll:
                 </p>
               )}
               {hasPunkte && !hasFahrverbot && (
                 <p className="text-sm leading-relaxed text-ink-muted mb-4">
-                  Bei {entry.bussgeldEur}&nbsp;&euro; und {punkteText} kann sich
+                  Bei {entry.bussgeldEur}{'\u00A0'}€ und {punkteText} kann sich
                   ein Einspruch lohnen:
                 </p>
               )}
@@ -365,9 +365,9 @@ export default async function SpeedPage({ params }: PageProps) {
                       </p>
                     </div>
                     <p className="text-xs leading-relaxed text-ink-muted pl-5">
-                      Wenn Sie beruflich auf den F&uuml;hrerschein angewiesen
-                      sind, kann ein H&auml;rtefall-Antrag das Fahrverbot in
-                      eine h&ouml;here Geldbu&szlig;e umwandeln.
+                      Wenn Sie beruflich auf den Führerschein angewiesen
+                      sind, kann ein Härtefall-Antrag das Fahrverbot in
+                      eine höhere Geldbuße umwandeln.
                     </p>
                   </div>
                 )}
@@ -381,7 +381,7 @@ export default async function SpeedPage({ params }: PageProps) {
                   <p className="text-xs leading-relaxed text-ink-muted pl-5">
                     Abgelaufene Eichfrist, fehlerhafte Aufstellung, fehlende
                     Beschilderung oder bekannte Softwareprobleme des
-                    Messger&auml;ts k&ouml;nnen zur Einstellung f&uuml;hren.
+                    Messgeräts können zur Einstellung führen.
                   </p>
                 </div>
                 <div className="rounded-xl border border-line bg-surface p-4">
@@ -392,8 +392,8 @@ export default async function SpeedPage({ params }: PageProps) {
                     </p>
                   </div>
                   <p className="text-xs leading-relaxed text-ink-muted pl-5">
-                    Unscharfes Blitzerfoto, mehrere m&ouml;gliche Fahrer oder
-                    Zweifel an der Zuordnung. Als Halter m&uuml;ssen Sie den
+                    Unscharfes Blitzerfoto, mehrere mögliche Fahrer oder
+                    Zweifel an der Zuordnung. Als Halter müssen Sie den
                     Fahrer nicht benennen.
                   </p>
                 </div>
@@ -419,9 +419,9 @@ export default async function SpeedPage({ params }: PageProps) {
                       </p>
                     </div>
                     <p className="text-xs leading-relaxed text-ink-muted pl-5">
-                      Fehlende oder falsche Angaben im Bu&szlig;geldbescheid
-                      &mdash; z.&nbsp;B. falsches Kennzeichen, fehlender Tatort
-                      oder &uuml;berschrittene 3-Monats-Frist.
+                      Fehlende oder falsche Angaben im Bußgeldbescheid
+                      — z.{'\u00A0'}B. falsches Kennzeichen, fehlender Tatort
+                      oder überschrittene 3-Monats-Frist.
                     </p>
                   </div>
                 )}
@@ -437,7 +437,7 @@ export default async function SpeedPage({ params }: PageProps) {
             {/* --- Messverfahren --- */}
             <section id="messverfahren" className="mt-10">
               <h2 className="text-[20px] leading-[1.35] font-medium text-ink mb-4">
-                H&auml;ufige Messverfahren bei {kmh}&nbsp;km/h{' '}
+                Häufige Messverfahren bei {kmh}{'\u00A0'}km/h{' '}
                 {locationLabel.toLowerCase()}
               </h2>
               <p className="text-sm leading-relaxed text-ink-muted mb-4">
@@ -466,48 +466,48 @@ export default async function SpeedPage({ params }: PageProps) {
             {/* --- Probezeit --- */}
             <section id="probezeit" className="mt-10">
               <h2 className="text-[20px] leading-[1.35] font-medium text-ink mb-3">
-                Probezeit: {kmh}&nbsp;km/h zu schnell ist ein{' '}
-                {isA ? 'A' : 'B'}-Versto&szlig;
+                Probezeit: {kmh}{'\u00A0'}km/h zu schnell ist ein{' '}
+                {isA ? 'A' : 'B'}-Verstoß
               </h2>
               {isA ? (
                 <div className="bg-warning-50 border-l-4 border-warning-600 rounded-r-lg px-5 py-4">
                   <p className="text-sm font-medium text-warning-800 mb-2">
-                    Achtung Fahranf&auml;nger &mdash; A-Versto&szlig;
+                    Achtung Fahranfänger — A-Verstoß
                   </p>
                   <ul className="space-y-1.5 text-sm leading-relaxed text-ink-muted">
                     <li className="flex items-start gap-2">
                       <span className="text-warning-600 mt-0.5 shrink-0">
-                        &bull;
+                        •
                       </span>
                       <span>
-                        Verl&auml;ngerung der Probezeit von 2 auf 4&nbsp;Jahre
+                        Verlängerung der Probezeit von 2 auf 4{'\u00A0'}Jahre
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-warning-600 mt-0.5 shrink-0">
-                        &bull;
+                        •
                       </span>
                       <span>
                         Anordnung eines kostenpflichtigen Aufbauseminars (ca.
-                        250&ndash;500&nbsp;&euro;)
+                        250–500{'\u00A0'}€)
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-warning-600 mt-0.5 shrink-0">
-                        &bull;
+                        •
                       </span>
                       <span>
-                        Bei einem weiteren A-Versto&szlig;: Verwarnung mit
+                        Bei einem weiteren A-Verstoß: Verwarnung mit
                         Empfehlung einer verkehrspsychologischen Beratung
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-warning-600 mt-0.5 shrink-0">
-                        &bull;
+                        •
                       </span>
                       <span>
-                        Bei einem dritten A-Versto&szlig;: Entzug der
-                        Fahrerlaubnis f&uuml;r mindestens 6&nbsp;Monate
+                        Bei einem dritten A-Verstoß: Entzug der
+                        Fahrerlaubnis für mindestens 6{'\u00A0'}Monate
                       </span>
                     </li>
                   </ul>
@@ -515,43 +515,43 @@ export default async function SpeedPage({ params }: PageProps) {
               ) : (
                 <div className="bg-blue-50 border-l-4 border-blue-400 rounded-r-lg px-5 py-4">
                   <p className="text-sm font-medium text-blue-800 mb-2">
-                    Hinweis f&uuml;r Fahranf&auml;nger &mdash; B-Versto&szlig;
+                    Hinweis für Fahranfänger — B-Verstoß
                   </p>
                   <p className="text-sm leading-relaxed text-ink-muted mb-3">
-                    Geschwindigkeitsverst&ouml;&szlig;e unter 21&nbsp;km/h
+                    Geschwindigkeitsverstöße unter 21{'\u00A0'}km/h
                     gelten in der Probezeit als{' '}
-                    <strong>B-Versto&szlig;</strong> (weniger schwerwiegend):
+                    <strong>B-Verstoß</strong> (weniger schwerwiegend):
                   </p>
                   <ul className="space-y-1.5 text-sm leading-relaxed text-ink-muted">
                     <li className="flex items-start gap-2">
                       <span className="text-blue-500 mt-0.5 shrink-0">
-                        &bull;
+                        •
                       </span>
                       <span>
-                        <strong>1. B-Versto&szlig;:</strong> Keine
-                        zus&auml;tzlichen Folgen &uuml;ber das Bu&szlig;geld
+                        <strong>1. B-Verstoß:</strong> Keine
+                        zusätzlichen Folgen über das Bußgeld
                         hinaus
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-blue-500 mt-0.5 shrink-0">
-                        &bull;
+                        •
                       </span>
                       <span>
-                        <strong>2. B-Versto&szlig;:</strong>{' '}
-                        Verl&auml;ngerung der Probezeit auf 4&nbsp;Jahre +
+                        <strong>2. B-Verstoß:</strong>{' '}
+                        Verlängerung der Probezeit auf 4{'\u00A0'}Jahre +
                         verpflichtendes Aufbauseminar (ca.
-                        250&ndash;500&nbsp;&euro;)
+                        250–500{'\u00A0'}€)
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-blue-500 mt-0.5 shrink-0">
-                        &bull;
+                        •
                       </span>
                       <span>
-                        <strong>Wichtig:</strong> 2 B-Verst&ouml;&szlig;e
-                        werden wie 1 A-Versto&szlig; behandelt. Ab 21&nbsp;km/h
-                        w&auml;re es sofort ein A-Versto&szlig;.
+                        <strong>Wichtig:</strong> 2 B-Verstöße
+                        werden wie 1 A-Verstoß behandelt. Ab 21{'\u00A0'}km/h
+                        wäre es sofort ein A-Verstoß.
                       </span>
                     </li>
                   </ul>
@@ -566,8 +566,8 @@ export default async function SpeedPage({ params }: PageProps) {
                 {currentRange.label}
               </h2>
               <p className="text-sm leading-relaxed text-ink-muted mb-3">
-                {kmh}&nbsp;km/h liegt im Bereich {currentRange.label}.
-                Innerhalb dieses Bereichs gelten f&uuml;r alle km/h-Werte
+                {kmh}{'\u00A0'}km/h liegt im Bereich {currentRange.label}.
+                Innerhalb dieses Bereichs gelten für alle km/h-Werte
                 dieselben Folgen:
               </p>
               <div className="overflow-x-auto rounded-xl border border-line">
@@ -578,7 +578,7 @@ export default async function SpeedPage({ params }: PageProps) {
                         km/h
                       </th>
                       <th className="px-4 py-2.5 font-medium text-ink">
-                        Bu&szlig;geld
+                        Bußgeld
                       </th>
                       <th className="px-4 py-2.5 font-medium text-ink">
                         Punkte
@@ -613,7 +613,7 @@ export default async function SpeedPage({ params }: PageProps) {
                         <td
                           className={`px-4 py-2 ${s.isCurrent ? 'font-medium text-primary-800' : 'text-ink-muted'}`}
                         >
-                          {currentRange.bussgeld} &euro;
+                          {currentRange.bussgeld} €
                         </td>
                         <td
                           className={`px-4 py-2 ${s.isCurrent ? 'font-medium text-primary-800' : 'text-ink-muted'}`}

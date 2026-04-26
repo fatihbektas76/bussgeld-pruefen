@@ -125,16 +125,16 @@ export default function Home() {
       <section className="bg-surface py-16 md:py-24">
         <div className="mx-auto max-w-prose px-4 text-center">
           <span className="inline-block mb-5 px-3.5 py-1.5 rounded-full bg-primary-50 text-primary-800 text-[11px] font-medium tracking-wide">
-            Bu&szlig;geldkatalog 2026 &middot; Aktualisiert 25.04.2026
+            Bußgeldkatalog 2026 &middot; Aktualisiert 25.04.2026
           </span>
 
           <h1 className="text-[clamp(1.75rem,1rem+3vw,2.75rem)] leading-[1.2] font-semibold text-ink">
-            Bu&szlig;geldbescheid bekommen? In 60&nbsp;Sekunden pr&uuml;fen, was Sie tun k&ouml;nnen.
+            Bußgeldbescheid bekommen? In 60&nbsp;Sekunden prüfen, was Sie tun können.
           </h1>
 
           <p className="mt-4 text-sm text-ink-muted max-w-lg mx-auto">
-            Bu&szlig;geld berechnen, Punkte und Fahrverbot pr&uuml;fen und
-            Einspruchschancen einsch&auml;tzen&nbsp;&mdash; kostenlos, ohne
+            Bußgeld berechnen, Punkte und Fahrverbot prüfen und
+            Einspruchschancen einschätzen&nbsp;&mdash; kostenlos, ohne
             Anmeldung.
           </p>
 
@@ -143,18 +143,18 @@ export default function Home() {
               href="/einspruch-pruefen"
               className="inline-flex items-center px-6 py-3 rounded-lg bg-primary-600 text-white text-sm font-medium hover:bg-primary-800 transition-colors"
             >
-              Jetzt kostenlos pr&uuml;fen &rarr;
+              Jetzt kostenlos prüfen &rarr;
             </Link>
             <Link
               href="/bussgeldrechner"
               className="inline-flex items-center px-6 py-3 rounded-lg border border-line-strong text-sm font-medium text-ink hover:bg-surface-alt transition-colors"
             >
-              Bu&szlig;geld berechnen
+              Bußgeld berechnen
             </Link>
           </div>
 
           <p className="mt-6 text-xs text-ink-subtle">
-            &#10003; 100&nbsp;% kostenlos &middot; &#10003; Gepr&uuml;ft von Fachanw&auml;lten &middot; &#10003; DSGVO-konform
+            &#10003; 100&nbsp;% kostenlos &middot; &#10003; Geprüft von Fachanwälten &middot; &#10003; DSGVO-konform
           </p>
         </div>
       </section>
@@ -219,7 +219,7 @@ export default function Home() {
               {/* Navigation (decorative) */}
               <div className="mt-6 flex items-center justify-between">
                 <span className="text-sm text-ink-muted cursor-default">
-                  &larr; Zur&uuml;ck
+                  &larr; Zurück
                 </span>
                 <span className="inline-flex items-center px-5 py-2 rounded-lg bg-primary-600 text-white text-sm font-medium cursor-default">
                   Weiter &rarr;
@@ -250,7 +250,7 @@ export default function Home() {
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <h2 className="text-xl font-semibold text-ink mb-8">
-            H&auml;ufige Verst&ouml;&szlig;e pr&uuml;fen
+            Häufige Verstöße prüfen
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -324,7 +324,7 @@ export default function Home() {
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <h2 className="text-xl font-semibold text-ink mb-8">
-            Bu&szlig;geld in Ihrer Stadt
+            Bußgeld in Ihrer Stadt
           </h2>
 
           <div className="flex flex-wrap gap-2">
@@ -341,7 +341,7 @@ export default function Home() {
               href="/staedte/"
               className="inline-flex items-center px-4 py-2 rounded-full bg-primary-50 border border-primary-100 text-sm font-medium text-primary-800 hover:bg-primary-100 transition-colors"
             >
-              Alle 50 St&auml;dte &rarr;
+              Alle 50 Städte &rarr;
             </Link>
           </div>
         </div>
@@ -353,7 +353,7 @@ export default function Home() {
       <section className="bg-surface border-t border-line py-16">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <h2 className="text-xl font-semibold text-ink mb-8">
-            Rechtlich gepr&uuml;ft
+            Rechtlich geprüft
           </h2>
 
           <div className="max-w-md mb-8">
@@ -373,8 +373,8 @@ export default function Home() {
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-ink-muted">
-            <span>&#10003; Inhalte rechtlich gepr&uuml;ft</span>
-            <span>&#10003; T&Uuml;V-zertifizierter Datenschutz</span>
+            <span>&#10003; Inhalte rechtlich geprüft</span>
+            <span>&#10003; TÜV-zertifizierter Datenschutz</span>
             <span>&#10003; DSGVO-konform</span>
           </div>
         </div>
