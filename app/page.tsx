@@ -31,7 +31,7 @@ const violations = [
     icon: 'km',
     bg: 'bg-primary-50',
     fg: 'text-primary-800',
-    counter: '125 Seiten',
+    counter: '140 Seiten',
     href: '/geblitzt/',
     subtitle: 'Innerorts, au\u00DFerorts, Autobahn \u2014 PKW, LKW, Motorrad.',
   },
@@ -40,8 +40,8 @@ const violations = [
     icon: '\u25CF',
     bg: 'bg-danger-50',
     fg: 'text-danger-800',
-    counter: '8 Seiten',
-    href: '/verstoesse/rotlicht/',
+    counter: '',
+    href: '/verstoesse/rotlicht/einfach',
     subtitle: 'Einfach, qualifiziert (>1\u00A0Sek.), mit Gef\u00E4hrdung.',
   },
   {
@@ -49,8 +49,8 @@ const violations = [
     icon: '\u2194',
     bg: 'bg-warning-50',
     fg: 'text-warning-800',
-    counter: '12 Seiten',
-    href: '/verstoesse/abstand/',
+    counter: 'Demn\u00E4chst',
+    href: '/verstoesse/',
     subtitle: 'Br\u00FCcken-Anlage, Nachfahrt, alle km/h-Stufen.',
   },
   {
@@ -58,8 +58,8 @@ const violations = [
     icon: 'H',
     bg: 'bg-[#F3E8FF]',
     fg: 'text-[#581C87]',
-    counter: '4 Seiten',
-    href: '/verstoesse/handy-am-steuer/',
+    counter: 'Demn\u00E4chst',
+    href: '/verstoesse/',
     subtitle: 'PKW, LKW, Fahrrad \u2014 mit/ohne Gef\u00E4hrdung.',
   },
   {
@@ -67,8 +67,8 @@ const violations = [
     icon: '\u2030',
     bg: 'bg-[#FDE8EF]',
     fg: 'text-[#831843]',
-    counter: '7 Seiten',
-    href: '/verstoesse/alkohol/',
+    counter: 'Demn\u00E4chst',
+    href: '/verstoesse/',
     subtitle: '0,3 / 0,5 / 1,1 / 1,6\u00A0\u2030 \u2014 Probezeit, MPU.',
   },
   {
@@ -76,8 +76,8 @@ const violations = [
     icon: 'P',
     bg: 'bg-success-50',
     fg: 'text-success-800',
-    counter: '12 Seiten',
-    href: '/verstoesse/parkverstoesse/',
+    counter: 'Demn\u00E4chst',
+    href: '/verstoesse/',
     subtitle: 'Halteverbot, Gehweg, Feuerwehr, E-Lades\u00E4ule.',
   },
 ] as const;
@@ -85,10 +85,7 @@ const violations = [
 const tools = [
   { title: 'Bu\u00DFgeldrechner', href: '/bussgeldrechner' },
   { title: 'Einspruch-Check', href: '/einspruch-pruefen' },
-  { title: 'Punkterechner Flensburg', href: '#' },
-  { title: 'Fahrverbot-H\u00E4rtefall', href: '#' },
-  { title: 'Messverfahren-Identifier', href: '/messverfahren/poliscan-speed' },
-  { title: 'Promille- & MPU-Check', href: '#' },
+  { title: 'Messverfahren-\u00DCbersicht', href: '/messverfahren' },
 ] as const;
 
 const cities = [
@@ -108,9 +105,9 @@ const cities = [
 
 const stats = [
   { value: '115\u00A0\u20AC', label: '\u00D8 Bu\u00DFgeld gepr\u00FCft' },
-  { value: '390+', label: 'Bu\u00DFgeld-Konstellationen' },
-  { value: '10', label: 'Spezialrechner' },
-  { value: '50', label: 'St\u00E4dte mit Bu\u00DFgeldstelle' },
+  { value: '140+', label: 'Bu\u00DFgeld-Seiten' },
+  { value: '3', label: 'Kostenlose Werkzeuge' },
+  { value: '5', label: 'Messverfahren erkl\u00E4rt' },
 ] as const;
 
 /* -------------------------------------------------------------------------- */
@@ -342,7 +339,7 @@ export default function Home() {
               href="/staedte/"
               className="inline-flex items-center px-4 py-2 rounded-full bg-primary-50 border border-primary-100 text-sm font-medium text-primary-800 hover:bg-primary-100 transition-colors"
             >
-              Alle 50 Städte &rarr;
+              Alle St&auml;dte &rarr;
             </Link>
           </div>
         </div>
