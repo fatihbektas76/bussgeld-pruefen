@@ -11,12 +11,25 @@ import DocSidebar from '@/components/content/DocSidebar';
 import ArticleSchema from '@/components/seo/ArticleSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 import Link from 'next/link';
+import { ogDefaults, defaultOgImage } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Rotlichtversto\u00df einfach (< 1 Sekunde) \u2014 90 \u20ac und 1 Punkt',
   description:
     'Einfacher Rotlichtversto\u00df bei Rotphase unter 1 Sekunde: 90 \u20ac Bu\u00dfgeld, 1 Punkt, kein Fahrverbot. Infos zu Messung, Einspruch und Sonderf\u00e4llen.',
   alternates: { canonical: '/verstoesse/rotlicht/einfach' },
+  openGraph: {
+    title: 'Rotlichtversto\u00df einfach (< 1 Sekunde) \u2014 90 \u20ac und 1 Punkt',
+    description:
+      'Einfacher Rotlichtversto\u00df bei Rotphase unter 1 Sekunde: 90 \u20ac Bu\u00dfgeld, 1 Punkt, kein Fahrverbot. Infos zu Messung, Einspruch und Sonderf\u00e4llen.',
+    url: '/verstoesse/rotlicht/einfach',
+    type: 'article',
+    ...ogDefaults,
+    publishedTime: '2026-02-10',
+    modifiedTime: '2026-04-25',
+    authors: ['Fatih Bektas'],
+    images: [defaultOgImage],
+  },
 };
 
 const faqItems = [

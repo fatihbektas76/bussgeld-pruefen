@@ -1,9 +1,20 @@
 import BussgeldRechner from '@/components/tools/BussgeldRechner';
+import { ogDefaults, defaultOgImage } from '@/lib/seo';
 
 export const metadata = {
   title: 'Bußgeldrechner 2026 — Bußgeld, Punkte & Fahrverbot berechnen',
   description:
     'Berechnen Sie Ihr Bußgeld nach dem aktuellen Bußgeldkatalog 2026. Punkte, Fahrverbot und Probezeit-Einstufung — kostenlos.',
+  alternates: { canonical: '/bussgeldrechner' },
+  openGraph: {
+    title: 'Bußgeldrechner 2026 — Bußgeld, Punkte & Fahrverbot berechnen',
+    description:
+      'Berechnen Sie Ihr Bußgeld nach dem aktuellen Bußgeldkatalog 2026. Punkte, Fahrverbot und Probezeit-Einstufung — kostenlos.',
+    url: '/bussgeldrechner',
+    type: 'website',
+    ...ogDefaults,
+    images: [defaultOgImage],
+  },
 };
 
 export default function BussgeldrechnerPage() {

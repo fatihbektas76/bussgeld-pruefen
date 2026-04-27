@@ -1,11 +1,21 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { ogDefaults, defaultOgImage } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Geblitzt? Bußgeld, Punkte & Fahrverbot nach km/h',
   description:
     'Alle Bußgelder für Geschwindigkeitsverstöße innerorts und außerorts im Überblick — PKW, LKW, Motorrad, Bus. Wählen Sie Ihren Verstoß und erfahren Sie sofort, was droht.',
   alternates: { canonical: 'https://bussgeld-pruefen.de/geblitzt' },
+  openGraph: {
+    title: 'Geblitzt? Bußgeld, Punkte & Fahrverbot nach km/h',
+    description:
+      'Alle Bußgelder für Geschwindigkeitsverstöße innerorts und außerorts im Überblick — PKW, LKW, Motorrad, Bus. Wählen Sie Ihren Verstoß und erfahren Sie sofort, was droht.',
+    url: '/geblitzt',
+    type: 'website',
+    ...ogDefaults,
+    images: [defaultOgImage],
+  },
 };
 
 /* -------------------------------------------------------------------------- */

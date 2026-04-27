@@ -16,6 +16,7 @@ import {
   getAllSpeedParams,
   type LocationKey,
 } from '@/lib/speed-page-data';
+import { ogDefaults, defaultOgImage } from '@/lib/seo';
 
 // ---------------------------------------------------------------------------
 // Static params
@@ -62,6 +63,17 @@ export async function generateMetadata({
     description: `${locationLabel} ${kmh} km/h zu schnell: ${entry.bussgeldEur}\u00a0\u20ac Bu\u00dfgeld, ${entry.punkte} Punkt${entry.punkte !== 1 ? 'e' : ''}${fahrverbot}. Toleranz, Einspruch, Probezeit \u2014 alle Infos 2026.`,
     alternates: {
       canonical: `/geblitzt/${p.location}/${kmh}-kmh`,
+    },
+    openGraph: {
+      title: `${locationLabel} ${kmh} km/h zu schnell \u2014 ${entry.bussgeldEur} \u20ac, ${entry.punkte} Punkt${entry.punkte !== 1 ? 'e' : ''}`,
+      description: `${locationLabel} ${kmh} km/h zu schnell: ${entry.bussgeldEur}\u00a0\u20ac Bu\u00dfgeld, ${entry.punkte} Punkt${entry.punkte !== 1 ? 'e' : ''}${fahrverbot}. Toleranz, Einspruch, Probezeit \u2014 alle Infos 2026.`,
+      url: `/geblitzt/${p.location}/${kmh}-kmh`,
+      type: 'article',
+      ...ogDefaults,
+      publishedTime: '2026-04-26',
+      modifiedTime: '2026-04-26',
+      authors: ['Fatih Bektas'],
+      images: [defaultOgImage],
     },
   };
 }
@@ -111,6 +123,8 @@ export default async function SpeedPage({ params }: PageProps) {
         datePublished="2026-04-26"
         dateModified="2026-04-26"
         authorName="Fatih Bektas"
+        url={`https://bussgeld-pruefen.de/geblitzt/${location}/${kmh}-kmh`}
+        speakable={['#direktantwort']}
       />
       <FAQSchema items={faqItems} />
 

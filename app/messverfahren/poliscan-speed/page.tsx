@@ -10,12 +10,26 @@ import RelatedLinks from '@/components/content/RelatedLinks';
 import DocSidebar from '@/components/content/DocSidebar';
 import ArticleSchema from '@/components/seo/ArticleSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
+import { ogDefaults, defaultOgImage } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title:
     'PoliScan Speed (Vitronic) — Funktion, Messfehler, Angriffspunkte',
   description:
     'PoliScan Speed von Vitronic: Funktionsweise, Toleranzen, bekannte Messfehler und juristische Angriffspunkte für den Einspruch. Geprüft von Fachanwälten.',
+  alternates: { canonical: '/messverfahren/poliscan-speed' },
+  openGraph: {
+    title: 'PoliScan Speed (Vitronic) — Funktion, Messfehler, Angriffspunkte',
+    description:
+      'PoliScan Speed von Vitronic: Funktionsweise, Toleranzen, bekannte Messfehler und juristische Angriffspunkte für den Einspruch. Geprüft von Fachanwälten.',
+    url: '/messverfahren/poliscan-speed',
+    type: 'article',
+    ...ogDefaults,
+    publishedTime: '2025-03-01',
+    modifiedTime: '2026-04-25',
+    authors: ['Fatih Bektas'],
+    images: [defaultOgImage],
+  },
 };
 
 /* -------------------------------------------------------------------------- */

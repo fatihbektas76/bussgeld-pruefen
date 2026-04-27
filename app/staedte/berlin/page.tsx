@@ -8,11 +8,25 @@ import AuthorBox from '@/components/content/AuthorBox';
 import DocSidebar from '@/components/content/DocSidebar';
 import ArticleSchema from '@/components/seo/ArticleSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
+import { ogDefaults, defaultOgImage } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Bußgeldbescheid Berlin — Bußgeldstelle, Blitzer, Einspruch',
   description:
     'Bußgeldbescheid aus Berlin: Bußgeldstelle, stationäre Blitzer-Standorte, zuständiges Amtsgericht und Einspruch-Check. Stand 04/2026.',
+  alternates: { canonical: '/staedte/berlin' },
+  openGraph: {
+    title: 'Bußgeldbescheid Berlin — Bußgeldstelle, Blitzer, Einspruch',
+    description:
+      'Bußgeldbescheid aus Berlin: Bußgeldstelle, stationäre Blitzer-Standorte, zuständiges Amtsgericht und Einspruch-Check. Stand 04/2026.',
+    url: '/staedte/berlin',
+    type: 'article',
+    ...ogDefaults,
+    publishedTime: '2025-02-10',
+    modifiedTime: '2026-04-25',
+    authors: ['Fatih Bektas'],
+    images: [defaultOgImage],
+  },
 };
 
 /* -------------------------------------------------------------------------- */

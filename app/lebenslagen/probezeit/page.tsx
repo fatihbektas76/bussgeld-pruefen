@@ -10,12 +10,25 @@ import DocSidebar from '@/components/content/DocSidebar';
 import ArticleSchema from '@/components/seo/ArticleSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 import HowToSchema from '@/components/seo/HowToSchema';
+import { ogDefaults, defaultOgImage } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Probezeit Fahranf\u00e4nger \u2014 A-Verst\u00f6\u00dfe, B-Verst\u00f6\u00dfe und Folgen',
   description:
     'Probezeit 2026: A-Verst\u00f6\u00dfe, B-Verst\u00f6\u00dfe, Drei-Stufen-Modell, Aufbauseminar und Fahrerlaubnisentzug. Alle Regeln f\u00fcr Fahranf\u00e4nger.',
   alternates: { canonical: '/lebenslagen/probezeit' },
+  openGraph: {
+    title: 'Probezeit Fahranf\u00e4nger \u2014 A-Verst\u00f6\u00dfe, B-Verst\u00f6\u00dfe und Folgen',
+    description:
+      'Probezeit 2026: A-Verst\u00f6\u00dfe, B-Verst\u00f6\u00dfe, Drei-Stufen-Modell, Aufbauseminar und Fahrerlaubnisentzug. Alle Regeln f\u00fcr Fahranf\u00e4nger.',
+    url: '/lebenslagen/probezeit',
+    type: 'article',
+    ...ogDefaults,
+    publishedTime: '2026-01-20',
+    modifiedTime: '2026-04-25',
+    authors: ['Fatih Bektas'],
+    images: [defaultOgImage],
+  },
 };
 
 const faqItems = [

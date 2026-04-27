@@ -10,11 +10,25 @@ import DocSidebar from '@/components/content/DocSidebar';
 import ArticleSchema from '@/components/seo/ArticleSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 import HowToSchema from '@/components/seo/HowToSchema';
+import { ogDefaults, defaultOgImage } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Einspruch gegen Bußgeldbescheid — Frist, Form und Inhalt 2026',
   description:
     'Einspruch gegen den Bußgeldbescheid: 14-Tage-Frist, richtige Form, notwendiger Inhalt, Akteneinsicht und Kosten. Geprüft von Fachanwälten.',
+  alternates: { canonical: '/verfahren/bussgeldbescheid/einspruch' },
+  openGraph: {
+    title: 'Einspruch gegen Bußgeldbescheid — Frist, Form und Inhalt 2026',
+    description:
+      'Einspruch gegen den Bußgeldbescheid: 14-Tage-Frist, richtige Form, notwendiger Inhalt, Akteneinsicht und Kosten. Geprüft von Fachanwälten.',
+    url: '/verfahren/bussgeldbescheid/einspruch',
+    type: 'article',
+    ...ogDefaults,
+    publishedTime: '2025-01-15',
+    modifiedTime: '2026-04-25',
+    authors: ['Fatih Bektas'],
+    images: [defaultOgImage],
+  },
 };
 
 /* -------------------------------------------------------------------------- */

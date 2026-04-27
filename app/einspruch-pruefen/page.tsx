@@ -1,9 +1,20 @@
 import EinspruchFunnel from '@/components/tools/EinspruchFunnel';
+import { ogDefaults, defaultOgImage } from '@/lib/seo';
 
 export const metadata = {
   title: 'Einspruch prüfen — kostenlose Einschätzung in 60 Sekunden',
   description:
     'Prüfen Sie kostenlos, ob sich ein Einspruch gegen Ihren Bußgeldbescheid lohnt. 7 Fragen, 60 Sekunden, ohne Anmeldung.',
+  alternates: { canonical: '/einspruch-pruefen' },
+  openGraph: {
+    title: 'Einspruch prüfen — kostenlose Einschätzung in 60 Sekunden',
+    description:
+      'Prüfen Sie kostenlos, ob sich ein Einspruch gegen Ihren Bußgeldbescheid lohnt. 7 Fragen, 60 Sekunden, ohne Anmeldung.',
+    url: '/einspruch-pruefen',
+    type: 'website',
+    ...ogDefaults,
+    images: [defaultOgImage],
+  },
 };
 
 export default function EinspruchPruefenPage() {

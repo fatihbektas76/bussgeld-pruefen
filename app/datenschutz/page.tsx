@@ -1,6 +1,7 @@
 export const metadata = {
   title: 'Datenschutzerklärung — bussgeld-pruefen.de',
   description: 'Datenschutzerklärung gemäß DSGVO.',
+  alternates: { canonical: '/datenschutz' },
 };
 
 export default function DatenschutzPage() {

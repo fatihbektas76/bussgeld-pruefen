@@ -1,6 +1,7 @@
 export const metadata = {
   title: 'Impressum — bussgeld-pruefen.de',
   description: 'Impressum und Angaben gemäß § 5 TMG.',
+  alternates: { canonical: '/impressum' },
 };
 
 export default function ImpressumPage() {

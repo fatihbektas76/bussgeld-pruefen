@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Bu\u00DFgeld pr\u00FCfen \u2014 bussgeld-pruefen.de',
   description:
     'Bu\u00DFgeld berechnen, Punkte und Fahrverbot pr\u00FCfen, Einspruchschancen einsch\u00E4tzen \u2014 kostenlos, ohne Anmeldung.',
+  alternates: { canonical: '/' },
 };
 
 /* -------------------------------------------------------------------------- */

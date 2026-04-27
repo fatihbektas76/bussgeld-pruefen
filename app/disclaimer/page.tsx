@@ -1,6 +1,7 @@
 export const metadata = {
   title: 'Disclaimer — bussgeld-pruefen.de',
   description: 'Haftungsausschluss und rechtliche Hinweise.',
+  alternates: { canonical: '/disclaimer' },
 };
 
 export default function DisclaimerPage() {
