@@ -59,14 +59,14 @@ export async function generateMetadata({
       : ', kein Fahrverbot';
 
   return {
-    title: `${locationLabel} ${kmh} km/h zu schnell \u2014 Bu\u00dfgeld, Punkte, Fahrverbot 2026`,
-    description: `${locationLabel} ${kmh} km/h zu schnell: ${entry.bussgeldEur}\u00a0\u20ac Bu\u00dfgeld, ${entry.punkte} Punkt${entry.punkte !== 1 ? 'e' : ''}${fahrverbot}. Toleranz, Einspruch, Probezeit \u2014 alle Infos 2026.`,
+    title: `${kmh} km/h zu schnell ${locationLabel.toLowerCase()} geblitzt \u2014 ${entry.bussgeldEur} \u20ac, ${entry.punkte} Punkt${entry.punkte !== 1 ? 'e' : ''}${fahrverbot}`,
+    description: `${kmh} km/h zu schnell ${locationLabel.toLowerCase()} geblitzt: ${entry.bussgeldEur}\u00a0\u20ac Bu\u00dfgeld, ${entry.punkte} Punkt${entry.punkte !== 1 ? 'e' : ''}${fahrverbot}. Toleranz, Einspruch, Probezeit \u2014 alle Infos 2026.`,
     alternates: {
       canonical: `/geblitzt/${p.location}/${kmh}-kmh`,
     },
     openGraph: {
-      title: `${locationLabel} ${kmh} km/h zu schnell \u2014 ${entry.bussgeldEur} \u20ac, ${entry.punkte} Punkt${entry.punkte !== 1 ? 'e' : ''}`,
-      description: `${locationLabel} ${kmh} km/h zu schnell: ${entry.bussgeldEur}\u00a0\u20ac Bu\u00dfgeld, ${entry.punkte} Punkt${entry.punkte !== 1 ? 'e' : ''}${fahrverbot}. Toleranz, Einspruch, Probezeit \u2014 alle Infos 2026.`,
+      title: `${kmh} km/h zu schnell ${locationLabel.toLowerCase()} geblitzt \u2014 ${entry.bussgeldEur} \u20ac, ${entry.punkte} Punkt${entry.punkte !== 1 ? 'e' : ''}`,
+      description: `${kmh} km/h zu schnell ${locationLabel.toLowerCase()} geblitzt: ${entry.bussgeldEur}\u00a0\u20ac Bu\u00dfgeld, ${entry.punkte} Punkt${entry.punkte !== 1 ? 'e' : ''}${fahrverbot}. Toleranz, Einspruch, Probezeit \u2014 alle Infos 2026.`,
       url: `/geblitzt/${p.location}/${kmh}-kmh`,
       type: 'article',
       ...ogDefaults,
@@ -119,7 +119,7 @@ export default async function SpeedPage({ params }: PageProps) {
   return (
     <>
       <ArticleSchema
-        headline={`${locationLabel} ${kmh} km/h zu schnell \u2014 Bu\u00dfgeld, Punkte, Fahrverbot 2026`}
+        headline={`${kmh} km/h zu schnell ${locationLabel.toLowerCase()} geblitzt \u2014 Bu\u00dfgeld, Punkte & Fahrverbot`}
         datePublished="2026-04-26"
         dateModified="2026-04-26"
         authorName="Fatih Bektas"
@@ -142,7 +142,7 @@ export default async function SpeedPage({ params }: PageProps) {
 
             <PageHero
               category={`Bu\u00dfgeldkatalog 2026 \u00b7 zuletzt gepr\u00fcft 26.04.2026 von RA Bektas`}
-              title={`${locationLabel} ${kmh}\u00a0km/h zu schnell gefahren \u2014 Bu\u00dfgeld, Punkte &amp; Fahrverbot`}
+              title={`${kmh}\u00a0km/h zu schnell ${locationLabel.toLowerCase()} geblitzt \u2014 Bu\u00dfgeld, Punkte &amp; Fahrverbot`}
             />
 
             {/* --- Direktantwort --- */}
