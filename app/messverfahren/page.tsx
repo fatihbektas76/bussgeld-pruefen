@@ -47,7 +47,15 @@ export default function MessverfahrenPage() {
       <section className="py-12">
         <div className="mx-auto max-w-3xl px-4 md:px-6 space-y-4">
           {messverfahren.map((mv) => {
-            const hasDetail = mv.slug === 'poliscan-speed';
+            const slugToPath: Record<string, string> = {
+              'poliscan-speed': '/messverfahren/poliscan-speed',
+              'eso-es-8-0': '/messverfahren/eso-es-8',
+              'traffistar-s350': '/messverfahren/traffistar-s350',
+              'laser-riegl-fg21-p': '/messverfahren/riegl',
+              'provida': '/messverfahren/provida',
+            };
+            const detailHref = slugToPath[mv.slug];
+            const hasDetail = !!detailHref;
             const inner = (
               <>
                 <div className="flex items-start justify-between gap-4">
@@ -97,7 +105,7 @@ export default function MessverfahrenPage() {
               return (
                 <Link
                   key={mv.slug}
-                  href={`/messverfahren/${mv.slug}`}
+                  href={detailHref!}
                   className="group block bg-surface border border-line rounded-xl p-5 hover:border-line-strong hover:shadow-sm transition-all"
                 >
                   {inner}

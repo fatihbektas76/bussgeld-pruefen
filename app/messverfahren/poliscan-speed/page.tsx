@@ -86,12 +86,11 @@ const faqItems = [
 ];
 
 const relatedLinks = [
-  { label: 'ESO ES 8.0', href: '/messverfahren/eso-es-8/' },
-  { label: 'TraffiStar S350', href: '/messverfahren/traffistar-s350/' },
-  { label: 'Laser Riegl', href: '/messverfahren/riegl/' },
-  { label: 'ProViDa', href: '/messverfahren/provida/' },
-  { label: 'Section Control', href: '/messverfahren/section-control/' },
-  { label: 'Akteneinsicht', href: '/verfahren/akteneinsicht/' },
+  { label: 'ESO ES 8.0', href: '/messverfahren/eso-es-8' },
+  { label: 'TraffiStar S350', href: '/messverfahren/traffistar-s350' },
+  { label: 'RIEGL FG21-P', href: '/messverfahren/riegl' },
+  { label: 'ProViDa', href: '/messverfahren/provida' },
+  { label: 'Einspruch gegen Bu\u00dfgeldbescheid', href: '/verfahren/bussgeldbescheid/einspruch' },
 ];
 
 /* -------------------------------------------------------------------------- */

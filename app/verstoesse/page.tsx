@@ -32,9 +32,9 @@ const categories = [
   {
     title: 'Rotlichtverstoß',
     description:
-      'Einfacher Rotlichtverstoß (< 1 Sekunde): 90 € Bußgeld und 1 Punkt. Weitere Varianten in Kürze.',
+      'Einfach, qualifiziert (\u2265 1 Sek.), mit Gef\u00e4hrdung, mit Sachbesch\u00e4digung \u2014 alle Bu\u00dfgelder, Punkte und Fahrverbote.',
     href: '/verstoesse/rotlicht/einfach',
-    pages: '1 Seite',
+    pages: '4 Seiten',
     icon: '●',
     bg: 'bg-danger-50',
     fg: 'text-danger-800',
